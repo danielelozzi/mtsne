@@ -33,10 +33,10 @@ def similarity_tsne(P, no_dims=2):
 
     # Check inputs
     if isinstance(no_dims, float):
-        print "Error: array X should have type float.";
+        print("Error: array X should have type float.")
         return -1;
     if round(no_dims) != no_dims:
-        print "Error: number of dimensions should be an integer.";
+        print("Error: number of dimensions should be an integer.")
         return -1;
 
     max_iter = 1000;
@@ -90,7 +90,7 @@ def similarity_tsne(P, no_dims=2):
         # Compute current value of cost function
         if (iter + 1) % 10 == 0:
             C = Math.sum(P * Math.log(P / Q));
-            print "Iteration ", (iter + 1), ": error is ", C
+            print("Iteration ", (iter + 1), ": error is ", C)
 
         # Stop lying about P-values
         if iter == 100:
