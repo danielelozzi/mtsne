@@ -48,7 +48,7 @@ def make_movie(files, output, fps=10, bitrate=1800, **kwargs):
 
     command['.ogv'] = command['.mp4'] + '; ffmpeg -i %s.mp4 -r %d %s' % (output_name, fps, output)
 
-    print command[output_ext]
+    print(command[output_ext])
     output_ext = os.path.splitext(output)[1]
     os.system(command[output_ext])
 
