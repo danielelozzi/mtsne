@@ -48,9 +48,9 @@ def dtw_distance_matrix(data, distance_file, recompute = True):
         return np.loadtxt(distance_file, delimiter='\t')
 
     matrix = []
-    print 'Computing distance matrix using fastDTW:'
+    print('Computing distance matrix using fastDTW:')
     for i in range(len(data)):
-        print 'step ' + str(i) + '/' + str(len(data))
+        print('step ' + str(i) + '/' + str(len(data)))
         for j in range(len(data)):
             if i == j:
                 matrix.append(0)
